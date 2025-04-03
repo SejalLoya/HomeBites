@@ -10,7 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const handleLogout = async() => {
-    const res = await axios.get("http://localhost:5004/api/logout", {withCredentials: true});
+    const res = await axios.get("https://homebites-5qw3.onrender.com/api/logout", {withCredentials: true});
     const data = await res.data;
     if(data.success) {
       toast.success(data.message);
@@ -19,7 +19,7 @@ const Navbar = () => {
   }
 
   const checkUser = async() => {
-    const res = await axios.get("http://localhost:5004/api/fetch-user", {withCredentials: true});
+    const res = await axios.get("https://homebites-5qw3.onrender.com/api/fetch-user", {withCredentials: true});
     const data = await res.data;
     if(data.success) {
       dispatch(login());

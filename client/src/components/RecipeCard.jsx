@@ -17,7 +17,7 @@ const RecipeCard = ({ id, title, image }) => {
   const dispatch = useDispatch();
 
   const addToFavourites = async( favs ) => {
-    const res = await axios.post(`http://localhost:5004/api/add-to-favourites/${user._id}`, favs, {withCredentials: true});
+    const res = await axios.post(`https://homebites-5qw3.onrender.com/api/add-to-favourites/${user._id}`, favs, {withCredentials: true});
     const data = await res.data;
 
     if(data.success) {
@@ -28,7 +28,7 @@ const RecipeCard = ({ id, title, image }) => {
   const removeFromFavourites = async (favs) => {
     try {
       const res = await axios.post(
-        `http://localhost:5004/api/remove-from-favourites/${user._id}`,
+        `https://homebites-5qw3.onrender.com/api/remove-from-favourites/${user._id}`,
         favs,
         { withCredentials: true }
       );

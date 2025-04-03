@@ -11,7 +11,7 @@ const Signup = () => {
 
   const handleSignup = async(e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5004/api/signup", {
+    const res = await axios.post("https://homebites-5qw3.onrender.com/api/signup", {
       username,
       email,
       password,

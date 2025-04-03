@@ -7,7 +7,7 @@ export const getFavourites = async (id) => {
     }
   
     try {
-      const res = await axios.get(`http://localhost:5004/api/get-favourites/${id}`, {
+      const res = await axios.get(`https://homebites-5qw3.onrender.com/api/get-favourites/${id}`, {
         withCredentials: true,
       });
       return res.data.favourites; 
